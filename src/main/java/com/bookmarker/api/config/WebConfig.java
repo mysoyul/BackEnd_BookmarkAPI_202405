@@ -14,7 +14,8 @@ public class WebConfig {
     @Bean
     public FilterRegistrationBean<?> corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("*"));
+        //configuration.setAllowedOrigins(Arrays.asList("*"));
+        configuration.setAllowedOriginPatterns(Arrays.asList("*"));
         configuration.setAllowCredentials(true);
         configuration.setAllowedHeaders(Arrays.asList(
                 "Access-Control-Allow-Headers",
